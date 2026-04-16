@@ -123,3 +123,9 @@ hashmap.c:73:29: error: incompatible types when assigning to type ‘Pair *’ f
    73 |         map->buckets[pos] = *par;
       |                             ^
 2e96f8d
+Thu Apr 16 08:28:26 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|6
+total_score: 5/60
+6cf9f89

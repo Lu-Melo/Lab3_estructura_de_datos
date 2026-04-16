@@ -79,7 +79,10 @@ void insertMap(HashMap * map, char * key, void * value) {
         } else {
             while(map->buckets[pos] != NULL) {
                 pos++;
-            }    
+            }
+            if(is_equal(key, map->buckets[pos]->key) == 1) {
+                return;
+            }
         }
     }
 }

@@ -102,6 +102,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     }
     map->current = pos;
     return map->buckets[pos];*/
+    return NULL;
 }
 
 // 4. Implemente la función void eraseMap(HashMap * map, char * key). 

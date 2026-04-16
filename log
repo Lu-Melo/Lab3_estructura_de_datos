@@ -135,3 +135,14 @@ Thu Apr 16 08:28:54 PM UTC 2026:
  tests:  2|5
 total_score: 10/60
 ee17c94
+Thu Apr 16 08:33:11 PM UTC 2026: 
+ hashmap.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:92:33: error: ‘value’ undeclared (first use in this function)
+   92 |     Pair *par = createPair(key, value);
+      |                                 ^~~~~
+hashmap.c:92:33: note: each undeclared identifier is reported only once for each function it appears in
+d81a498

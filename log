@@ -146,3 +146,14 @@ hashmap.c:92:33: error: ‘value’ undeclared (first use in this function)
       |                                 ^~~~~
 hashmap.c:92:33: note: each undeclared identifier is reported only once for each function it appears in
 d81a498
+Thu Apr 16 08:33:34 PM UTC 2026: 
+ hashmap.c | 1 -
+ 1 file changed, 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:29: error: ‘par’ undeclared (first use in this function)
+   94 |         map->buckets[pos] = par;
+      |                             ^~~
+hashmap.c:94:29: note: each undeclared identifier is reported only once for each function it appears in
+496e602

@@ -260,3 +260,13 @@ Thu Apr 16 09:00:53 PM UTC 2026:
  tests:  4|5
 total_score: 10/60
 aa13258
+Thu Apr 16 09:03:57 PM UTC 2026: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:77:18: error: expected expression before ‘)’ token
+   77 |         if (pos >) pos = 0;
+      |                  ^
+42a8640

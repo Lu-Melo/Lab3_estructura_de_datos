@@ -68,3 +68,26 @@ Thu Apr 16 08:16:46 PM UTC 2026:
  tests:  1|6
 total_score: 5/60
 923c89b
+Thu Apr 16 08:27:07 PM UTC 2026: 
+ hashmap.c | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:70:5: error: unknown type name ‘pair’; did you mean ‘Pair’?
+   70 |     pair *par = createPair(key, value);
+      |     ^~~~
+      |     Pair
+hashmap.c:70:17: error: initialization of ‘int *’ from incompatible pointer type ‘Pair *’ [-Wincompatible-pointer-types]
+   70 |     pair *par = createPair(key, value);
+      |                 ^~~~~~~~~~
+hashmap.c:73:29: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+   73 |         map->buckets[pos] = pair;
+      |                             ^~~~
+      |                             Pair
+hashmap.c:73:29: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:70:11: error: unused variable ‘par’ [-Werror=unused-variable]
+   70 |     pair *par = createPair(key, value);
+      |           ^~~
+cc1: all warnings being treated as errors
+eec83ac

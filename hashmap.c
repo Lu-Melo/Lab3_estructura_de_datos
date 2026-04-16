@@ -70,11 +70,12 @@ void insertMap(HashMap * map, char * key, void * value) {
     Pair *par = createPair(key, value);
     
     if(map->buckets[pos] == NULL) {
-        if(is_equal(key, map->buckets[pos]->key) == 0) {
+        /*if(is_equal(key, map->buckets[pos]->key) == 0) {
             map->buckets[pos] = par;
             map->current = pos;
             map->size++;
-        }
+        }*/
+        printf("hola\n");
     } else {
         while(map->buckets[pos] != NULL) {
             pos++;

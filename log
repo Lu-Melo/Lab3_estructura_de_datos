@@ -19,3 +19,13 @@ hashmap.c:49:29: error: void value not ignored as it ought to be
    49 |     if(mapa == NULL) return exit(EXIT_FAILURE);
       |                             ^~~~~~~~~~~~~~~~~~
 2eed686
+Thu Apr 16 08:09:31 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:49:29: error: void value not ignored as it ought to be
+   49 |     if(mapa == NULL) return exit(EXIT_FAILURE);
+      |                             ^~~~~~~~~~~~~~~~~~
+99a13de

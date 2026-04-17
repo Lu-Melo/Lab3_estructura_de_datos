@@ -74,7 +74,7 @@ void insertMap(HashMap * map, char * key, void * value) {
             return;
         }
         pos++;
-        if (pos > map->capacity) pos = 0;
+        if (pos-1 > map->capacity) pos = 0;
     }
     map->buckets[pos] = par;
     map->current = pos;

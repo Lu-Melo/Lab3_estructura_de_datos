@@ -180,6 +180,7 @@ void enlarge(HashMap * map) {
     for(int i = 0; i < capacity; i++) {
         if( (aux_arreglo[i] != NULL) && (aux_arreglo[i]->key != NULL) ) {
             insertMap(map, aux_arreglo[i]->key, aux_arreglo[i]->value);
+            free(aux_arreglo[i]);
         }
     }
     free(aux_arreglo);

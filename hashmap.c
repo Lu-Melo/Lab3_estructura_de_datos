@@ -173,13 +173,13 @@ void enlarge(HashMap * map) {
     
     map->buckets = (Pair**) calloc(nueva_capacity, sizeof(Pair*));
     if(map->buckets == NULL) exit(EXIT_FAILURE);
-    
     map->capacity = nueva_capacity;
+    
     map->size = 0;
     
-    for(int i = 0; i < capacity; i++) {
+    for(long i = 0; i < capacity; i++) {
         if( (aux_arreglo[i] != NULL) && (aux_arreglo[i]->key != NULL) ) {
-            insertMap(map, aux_arreglo[i]->key, aux_arreglo[i]->value);
+            insertMap(map, aux_arreglo[i]->key, aux_arreglo[i]->value);   
             free(aux_arreglo[i]);
         }
     }

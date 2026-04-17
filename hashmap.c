@@ -74,7 +74,7 @@ void insertMap(HashMap * map, char * key, void * value) {
             return;
         }
         pos++;
-        if ( pos > map->capacity-1) pos = 0;
+        if (pos > map->capacity-1) pos = 0;
     }
     map->buckets[pos] = par;
     map->current = pos;
@@ -95,7 +95,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     
     while(is_equal(map->buckets[pos]->key, key) == 0) {
         pos++;
-        if ( pos > map->capacity-1) pos = 0;
+        if (pos > map->capacity-1) pos = 0;
         if(map->buckets[pos] == NULL) {
             return NULL;
         }
@@ -129,7 +129,7 @@ Pair * firstMap(HashMap * map) {
     
     while(bucket == NULL || bucket->key == NULL){
         pos++;
-        if ( pos > map->capacity-1) pos = 0;
+        if (pos > map->capacity-1) pos = 0;
         bucket = map->buckets[pos];
     }
     map->current = pos;
@@ -145,7 +145,7 @@ Pair * nextMap(HashMap * map) {
 
     while(bucket == NULL || bucket->key == NULL){
         pos++;
-        if ( pos > map->capacity-1) return NULL;
+        if (pos > map->capacity-1) return NULL;
         bucket = map->buckets[pos];
     }
     map->current = pos;

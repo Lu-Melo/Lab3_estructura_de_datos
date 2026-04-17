@@ -532,3 +532,22 @@ hashmap.c:139:26: note: expected ‘HashMap *’ {aka ‘struct HashMap *’} bu
   139 | Pair * nextMap(HashMap * map) {
       |                ~~~~~~~~~~^~~
 c6f730d
+Fri Apr 17 11:29:45 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:172:5: error: ‘nueva_capacity’ undeclared (first use in this function)
+  172 |     nueva_capacity = map->capacity * 2;
+      |     ^~~~~~~~~~~~~~
+hashmap.c:172:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:182:30: error: passing argument 1 of ‘nextMap’ from incompatible pointer type [-Wincompatible-pointer-types]
+  182 |         aux_bucket = nextMap(aux_arreglo);
+      |                              ^~~~~~~~~~~
+      |                              |
+      |                              Pair **
+hashmap.c:139:26: note: expected ‘HashMap *’ {aka ‘struct HashMap *’} but argument is of type ‘Pair **’
+  139 | Pair * nextMap(HashMap * map) {
+      |                ~~~~~~~~~~^~~
+f8dbd66

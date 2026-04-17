@@ -168,7 +168,7 @@ void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
     Pair **aux_arreglo = map->buckets;
-    Pair *aux_bucket = firstMap(aux_buckets);
+    Pair *aux_bucket = firstMap(aux_arreglo);
     nueva_capacity = map->capacity * 2;
 
     free(map->buckets);

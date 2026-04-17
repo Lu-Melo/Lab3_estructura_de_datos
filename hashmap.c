@@ -139,7 +139,7 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
     long pos = map->current;
     
-    if(map->size == 1) return map->buckets[pos];
+    if(map->size == 1) return NULL;
     
     Pair *bucket = map->buckets[pos];
 
@@ -149,7 +149,7 @@ Pair * nextMap(HashMap * map) {
         bucket = map->buckets[pos];
     }
     map->current = pos;
-    return bucket->value;
+    return bucket;
 }
 
 

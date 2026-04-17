@@ -139,9 +139,9 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
     long pos = map->current;
     
-    if(map->size == 1) return NULL;
+    if(map->size == 1) return map->buckets[pos];
     
-    Pair *bucket = map->buckets[pos];
+    Pair *bucket = map->buckets[pos+1];
 
     while(bucket == NULL || bucket->key == NULL){
         pos++;

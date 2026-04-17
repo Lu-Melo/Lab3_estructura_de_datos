@@ -169,7 +169,7 @@ void enlarge(HashMap * map) {
 
     Pair **aux_arreglo = map->buckets;
     Pair *aux_bucket = firstMap(map);
-    nueva_capacity = map->capacity * 2;
+    long nueva_capacity = map->capacity * 2;
 
     free(map->buckets);
     

@@ -551,3 +551,18 @@ hashmap.c:139:26: note: expected ‘HashMap *’ {aka ‘struct HashMap *’} bu
   139 | Pair * nextMap(HashMap * map) {
       |                ~~~~~~~~~~^~~
 f8dbd66
+Fri Apr 17 11:29:57 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:182:30: error: passing argument 1 of ‘nextMap’ from incompatible pointer type [-Wincompatible-pointer-types]
+  182 |         aux_bucket = nextMap(aux_arreglo);
+      |                              ^~~~~~~~~~~
+      |                              |
+      |                              Pair **
+hashmap.c:139:26: note: expected ‘HashMap *’ {aka ‘struct HashMap *’} but argument is of type ‘Pair **’
+  139 | Pair * nextMap(HashMap * map) {
+      |                ~~~~~~~~~~^~~
+688c660

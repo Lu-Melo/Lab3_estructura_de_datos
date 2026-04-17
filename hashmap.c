@@ -149,7 +149,7 @@ Pair * nextMap(HashMap * map) {
         bucket = map->buckets[pos];
     }
     map->current = pos;
-    return bucket;
+    return bucket->value;
 }
 
 

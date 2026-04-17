@@ -125,14 +125,14 @@ Pair * firstMap(HashMap * map) {
     if(map->size == 0) return NULL;
     
     long pos = 0;
-    Pair *bucket = map->bucket[pos];
+    Pair *bucket = map->buckets[pos];
     
     while(bucket == NULL){
         pos++;
         if ( pos > map->capacity-1) pos = 0;
-        bucket = map->bucket[pos];
+        bucket = map->buckets[pos];
     }
-    return map->bucket[pos];
+    return map->buckets[pos];
 }
 
 Pair * nextMap(HashMap * map) {

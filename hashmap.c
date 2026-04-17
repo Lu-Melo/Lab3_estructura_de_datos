@@ -167,7 +167,21 @@ Pair * nextMap(HashMap * map) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
+    Pair **aux_arreglo = map->buckets;
+    Pair *aux_bucket = firstMap(aux_buckets);
+    nueva_capacity = map->capacity * 2;
 
+    free(map->buckets);
+    
+    map->buckets = (Pair**) calloc(nueva_capacity, sizeof(Pair*));
+    if(map->buckets == NULL) exit(EXIT_FAILURE);
+    
+    while(aux_bucket != NULL) {
+        insertMap(map, aux_bucket->key, aux_bucket->value);
+        free(aux_bucket);
+        aux_bucket = nextMap(aux_arreglo);
+    }
+    
 }
 
 

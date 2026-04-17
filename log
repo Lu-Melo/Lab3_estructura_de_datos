@@ -482,3 +482,26 @@ Fri Apr 17 11:11:31 PM UTC 2026:
  tests:  16|1
 total_score: 50/60
 437482b
+Fri Apr 17 11:28:51 PM UTC 2026: 
+ hashmap.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:171:33: error: ‘aux_buckets’ undeclared (first use in this function); did you mean ‘aux_bucket’?
+  171 |     Pair *aux_bucket = firstMap(aux_buckets);
+      |                                 ^~~~~~~~~~~
+      |                                 aux_bucket
+hashmap.c:171:33: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:172:5: error: ‘nueva_capacity’ undeclared (first use in this function)
+  172 |     nueva_capacity = map->capacity * 2;
+      |     ^~~~~~~~~~~~~~
+hashmap.c:182:30: error: passing argument 1 of ‘nextMap’ from incompatible pointer type [-Wincompatible-pointer-types]
+  182 |         aux_bucket = nextMap(aux_arreglo);
+      |                              ^~~~~~~~~~~
+      |                              |
+      |                              Pair **
+hashmap.c:139:26: note: expected ‘HashMap *’ {aka ‘struct HashMap *’} but argument is of type ‘Pair **’
+  139 | Pair * nextMap(HashMap * map) {
+      |                ~~~~~~~~~~^~~
+9a5208f

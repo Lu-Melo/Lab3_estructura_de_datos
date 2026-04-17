@@ -166,22 +166,23 @@ Pair * nextMap(HashMap * map) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
-
+    
     Pair **aux_arreglo = map->buckets;
-    Pair *aux_bucket = firstMap(map);
-    long nueva_capacity = map->capacity * 2;
-
-    free(map->buckets);
+    long capacity = map->capacity;
+    long nueva_capacity = capacity * 2;
     
     map->buckets = (Pair**) calloc(nueva_capacity, sizeof(Pair*));
     if(map->buckets == NULL) exit(EXIT_FAILURE);
     
-    while(aux_bucket != NULL) {
-        insertMap(map, aux_bucket->key, aux_bucket->value);
-        free(aux_bucket);
-        aux_bucket = nextMap(aux_arreglo);
-    }
+    map->capacity = nueva_capacity;
+    map->size = 0;
     
+    for(int i = 0; i < capacity; i++) {
+        if( (aux_arreglo[i] != NULL) && (aux_arreglo[i]->key != NULL) ) {
+        
+        }
+    }
+    free(aux_arreglo);
 }
 
 

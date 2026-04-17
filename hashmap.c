@@ -137,18 +137,18 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-    long pos = map->current;
+    long next = map->current+1;
     
     if(map->size <= 1) return NULL;
     
-    Pair *bucket = map->buckets[pos+1];
+    Pair *bucket = map->buckets[next];
 
     while(bucket == NULL || bucket->key == NULL){
-        pos++;
-        if (pos > map->capacity-1) return NULL;
-        bucket = map->buckets[pos];
+        next++;
+        if (next > map->capacity-1) pos = 0;
+        bucket = map->buckets[next];
     }
-    map->current = pos;
+    map->current = next;
     return bucket;
 }
 

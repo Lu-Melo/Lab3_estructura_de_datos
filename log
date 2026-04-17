@@ -450,3 +450,13 @@ Fri Apr 17 11:09:05 PM UTC 2026:
  tests:  15|2
 total_score: 40/60
 b25b2d4
+Fri Apr 17 11:09:37 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:148:44: error: returning ‘int’ from a function with return type ‘Pair *’ makes pointer from integer without a cast [-Wint-conversion]
+  148 |         if (next > map->capacity-1) return 100;
+      |                                            ^~~
+c0c0738

@@ -133,7 +133,7 @@ Pair * firstMap(HashMap * map) {
         bucket = map->buckets[pos];
     }
     map->current = pos;
-    return map->buckets[pos];
+    return bucket;
 }
 
 Pair * nextMap(HashMap * map) {
@@ -149,7 +149,7 @@ Pair * nextMap(HashMap * map) {
         bucket = map->buckets[pos];
     }
     map->current = pos;
-    return map->buckets[pos];
+    return bucket;
 }
 
 
